@@ -31,7 +31,6 @@
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/clipboard.min.js"></script>
         <script src="../../../_static/copybutton.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
@@ -209,7 +208,6 @@
     
     
     <li class="source-link">
-        
         
     </li>
 
@@ -395,7 +393,7 @@
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Create a GMT API session and check the libgmt version.</span>
 
-<span class="sd">        Calls :meth:`~gmt.clib.Session.create`.</span>
+<span class="sd">        Calls :meth:`pygmt.clib.Session.create`.</span>
 
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
@@ -421,7 +419,7 @@
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Destroy the currently open GMT API session.</span>
 
-<span class="sd">        Calls :meth:`~gmt.clib.Session.destroy`.</span>
+<span class="sd">        Calls :meth:`pygmt.clib.Session.destroy`.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">destroy</span><span class="p">()</span></div>
 
@@ -520,10 +518,10 @@
 
 <span class="sd">        .. warning::</span>
 
-<span class="sd">            Usage of :class:`~gmt.clib.Session` as a context manager in a</span>
+<span class="sd">            Usage of :class:`pygmt.clib.Session` as a context manager in a</span>
 <span class="sd">            ``with`` block is preferred over calling</span>
-<span class="sd">            :meth:`~gmt.clib.Session.create` and</span>
-<span class="sd">            :meth:`~gmt.clib.Session.destroy` manually.</span>
+<span class="sd">            :meth:`pygmt.clib.Session.create` and</span>
+<span class="sd">            :meth:`pygmt.clib.Session.destroy` manually.</span>
 
 <span class="sd">        Calls ``GMT_Create_Session`` and generates a new ``GMTAPI_CTRL``</span>
 <span class="sd">        struct, which is a :class:`ctypes.c_void_p` pointer. Sets the</span>
@@ -611,10 +609,10 @@
 
 <span class="sd">        .. warning::</span>
 
-<span class="sd">            Usage of :class:`~gmt.clib.Session` as a context manager in a</span>
+<span class="sd">            Usage of :class:`pygmt.clib.Session` as a context manager in a</span>
 <span class="sd">            ``with`` block is preferred over calling</span>
-<span class="sd">            :meth:`~gmt.clib.Session.create` and</span>
-<span class="sd">            :meth:`~gmt.clib.Session.destroy` manually.</span>
+<span class="sd">            :meth:`pygmt.clib.Session.create` and</span>
+<span class="sd">            :meth:`pygmt.clib.Session.destroy` manually.</span>
 
 <span class="sd">        Calls ``GMT_Destroy_Session`` to terminate and free the memory of a</span>
 <span class="sd">        registered ``GMTAPI_CTRL`` session (the pointer for this struct is</span>
@@ -855,7 +853,8 @@
 
 <span class="sd">        If valid modifiers are not given, then will assume that modifiers are</span>
 <span class="sd">        not allowed. In this case, will raise a</span>
-<span class="sd">        :class:`~gmt.exceptions.GMTInvalidInput` exception if given a modifier.</span>
+<span class="sd">        :class:`pygmt.exceptions.GMTInvalidInput` exception if given a</span>
+<span class="sd">        modifier.</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -863,7 +862,7 @@
 <span class="sd">            The name of a valid GMT API constant, with an optional modifier.</span>
 <span class="sd">        valid : list of str</span>
 <span class="sd">            A list of valid values for the constant. Will raise a</span>
-<span class="sd">            :class:`~gmt.exceptions.GMTInvalidInput` exception if the given</span>
+<span class="sd">            :class:`pygmt.exceptions.GMTInvalidInput` exception if the given</span>
 <span class="sd">            value is not on the list.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">parts</span> <span class="o">=</span> <span class="n">constant</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)</span>
@@ -963,7 +962,7 @@
 <span class="sd">        Use this function to attach numpy array data to a GMT dataset and pass</span>
 <span class="sd">        it to GMT modules. Wraps ``GMT_Put_Vector``.</span>
 
-<span class="sd">        The dataset must be created by :meth:`~gmt.clib.Session.create_data`</span>
+<span class="sd">        The dataset must be created by :meth:`pygmt.clib.Session.create_data`</span>
 <span class="sd">        first. Use ``family=&#39;GMT_IS_DATASET|GMT_VIA_VECTOR&#39;``.</span>
 
 <span class="sd">        Not at all numpy dtypes are supported, only: float64, float32, int64,</span>
@@ -979,7 +978,7 @@
 <span class="sd">        ----------</span>
 <span class="sd">        dataset : :class:`ctypes.c_void_p`</span>
 <span class="sd">            The ctypes void pointer to a ``GMT_Dataset``. Create it with</span>
-<span class="sd">            :meth:`~gmt.clib.Session.create_data`.</span>
+<span class="sd">            :meth:`pygmt.clib.Session.create_data`.</span>
 <span class="sd">        column : int</span>
 <span class="sd">            The column number of this vector in the dataset (starting from 0).</span>
 <span class="sd">        vector : numpy 1d-array</span>
@@ -1026,7 +1025,7 @@
 <span class="sd">        Use this function to attach string type numpy array data to a GMT</span>
 <span class="sd">        dataset and pass it to GMT modules. Wraps ``GMT_Put_Strings``.</span>
 
-<span class="sd">        The dataset must be created by :meth:`~gmt.clib.Session.create_data`</span>
+<span class="sd">        The dataset must be created by :meth:`pygmt.clib.Session.create_data`</span>
 <span class="sd">        first.</span>
 
 <span class="sd">        .. warning::</span>
@@ -1039,7 +1038,7 @@
 <span class="sd">        ----------</span>
 <span class="sd">        dataset : :class:`ctypes.c_void_p`</span>
 <span class="sd">            The ctypes void pointer to a ``GMT_Dataset``. Create it with</span>
-<span class="sd">            :meth:`~gmt.clib.Session.create_data`.</span>
+<span class="sd">            :meth:`pygmt.clib.Session.create_data`.</span>
 <span class="sd">        family : str</span>
 <span class="sd">            The family type of the dataset. Can be either ``GMT_IS_VECTOR`` or</span>
 <span class="sd">            ``GMT_IS_MATRIX``.</span>
@@ -1086,7 +1085,7 @@
 <span class="sd">        Use this function to attach numpy array data to a GMT dataset and pass</span>
 <span class="sd">        it to GMT modules. Wraps ``GMT_Put_Matrix``.</span>
 
-<span class="sd">        The dataset must be created by :meth:`~gmt.clib.Session.create_data`</span>
+<span class="sd">        The dataset must be created by :meth:`pygmt.clib.Session.create_data`</span>
 <span class="sd">        first. Use ``|GMT_VIA_MATRIX&#39;`` in the family.</span>
 
 <span class="sd">        Not at all numpy dtypes are supported, only: float64, float32, int64,</span>
@@ -1101,7 +1100,7 @@
 <span class="sd">        ----------</span>
 <span class="sd">        dataset : :class:`ctypes.c_void_p`</span>
 <span class="sd">            The ctypes void pointer to a ``GMT_Dataset``. Create it with</span>
-<span class="sd">            :meth:`~gmt.clib.Session.create_data`.</span>
+<span class="sd">            :meth:`pygmt.clib.Session.create_data`.</span>
 <span class="sd">        matrix : numpy 2d-array</span>
 <span class="sd">            The array that will be attached to the dataset. Must be a 2d C</span>
 <span class="sd">            contiguous array.</span>
@@ -1134,7 +1133,7 @@
 <span class="sd">        Write a GMT data container to a file.</span>
 
 <span class="sd">        The data container should be created by</span>
-<span class="sd">        :meth:`~gmt.clib.Session.create_data`.</span>
+<span class="sd">        :meth:`pygmt.clib.Session.create_data`.</span>
 
 <span class="sd">        Wraps ``GMT_Write_Data`` but only allows writing to a file. So the</span>
 <span class="sd">        ``method`` argument is omitted.</span>
@@ -1160,7 +1159,7 @@
 <span class="sd">            The output file name.</span>
 <span class="sd">        data : :class:`ctypes.c_void_p`</span>
 <span class="sd">            Pointer to the data container created by</span>
-<span class="sd">            :meth:`~gmt.clib.Session.create_data`.</span>
+<span class="sd">            :meth:`pygmt.clib.Session.create_data`.</span>
 
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
@@ -1205,7 +1204,7 @@
 
 <span class="sd">        GMT uses a virtual file scheme to pass in data to API modules. Use it</span>
 <span class="sd">        to pass in your GMT data structure (created using</span>
-<span class="sd">        :meth:`~gmt.clib.Session.create_data`) to a module that expects an</span>
+<span class="sd">        :meth:`pygmt.clib.Session.create_data`) to a module that expects an</span>
 <span class="sd">        input or output file.</span>
 
 <span class="sd">        Use in a ``with`` block. Will automatically close the virtual file when</span>
@@ -1320,9 +1319,9 @@
 <span class="sd">        virtual file upon exit of the ``with`` block.</span>
 
 <span class="sd">        Use this instead of creating the data container and virtual file by</span>
-<span class="sd">        hand with :meth:`~gmt.clib.Session.create_data`,</span>
-<span class="sd">        :meth:`~gmt.clib.Session.put_vector`, and</span>
-<span class="sd">        :meth:`~gmt.clib.Session.open_virtual_file`.</span>
+<span class="sd">        hand with :meth:`pygmt.clib.Session.create_data`,</span>
+<span class="sd">        :meth:`pygmt.clib.Session.put_vector`, and</span>
+<span class="sd">        :meth:`pygmt.clib.Session.open_virtual_file`.</span>
 
 <span class="sd">        If the arrays are C contiguous blocks of memory, they will be passed</span>
 <span class="sd">        without copying to GMT. If they are not (e.g., they are columns of a 2D</span>
@@ -1430,12 +1429,12 @@
 
 <span class="sd">        **Not meant for creating ``GMT_GRID``**. The grid requires more</span>
 <span class="sd">        metadata than just the data matrix. Use</span>
-<span class="sd">        :meth:`~gmt.clib.Session.virtualfile_from_grid` instead.</span>
+<span class="sd">        :meth:`pygmt.clib.Session.virtualfile_from_grid` instead.</span>
 
 <span class="sd">        Use this instead of creating the data container and virtual file by</span>
-<span class="sd">        hand with :meth:`~gmt.clib.Session.create_data`,</span>
-<span class="sd">        :meth:`~gmt.clib.Session.put_matrix`, and</span>
-<span class="sd">        :meth:`~gmt.clib.Session.open_virtual_file`</span>
+<span class="sd">        hand with :meth:`pygmt.clib.Session.create_data`,</span>
+<span class="sd">        :meth:`pygmt.clib.Session.put_matrix`, and</span>
+<span class="sd">        :meth:`pygmt.clib.Session.open_virtual_file`</span>
 
 <span class="sd">        The matrix must be C contiguous in memory. If it is not (e.g., it is a</span>
 <span class="sd">        slice of a larger array), the array will be copied to make sure it is.</span>
@@ -1512,9 +1511,9 @@
 <span class="sd">        metadata.</span>
 
 <span class="sd">        Use this instead of creating a data container and virtual file by hand</span>
-<span class="sd">        with :meth:`~gmt.clib.Session.create_data`,</span>
-<span class="sd">        :meth:`~gmt.clib.Session.put_matrix`, and</span>
-<span class="sd">        :meth:`~gmt.clib.Session.open_virtual_file`</span>
+<span class="sd">        with :meth:`pygmt.clib.Session.create_data`,</span>
+<span class="sd">        :meth:`pygmt.clib.Session.put_matrix`, and</span>
+<span class="sd">        :meth:`pygmt.clib.Session.open_virtual_file`</span>
 
 <span class="sd">        The grid data matrix must be C contiguous in memory. If it is not</span>
 <span class="sd">        (e.g., it is a slice of a larger array), the array will be copied to</span>
@@ -1670,7 +1669,7 @@
         &copy; Copyright 2017-2021, The PyGMT Developers.
       
         <span class="commit">
-          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/65b099a">65b099a</a></code>.
+          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/8a97e1a">8a97e1a</a></code>.
         </span>
       
 

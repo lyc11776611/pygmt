@@ -31,9 +31,7 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -242,7 +240,6 @@
                    class="fa fa-github"> Improve this page</a>
             
         
-        
     </li>
 
   </ul>
@@ -253,31 +250,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="sphx-glr-download-link-note admonition note">
+  <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
 <p>Click <a class="reference internal" href="#sphx-glr-download-gallery-plot-datetime-inputs-py"><span class="std std-ref">here</span></a>
 to download the full example code</p>
@@ -289,13 +262,15 @@ to download the full example code</p>
 <li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.datetime64" title="(in NumPy v1.20)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.datetime64</span></code></a></p></li>
 <li><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DatetimeIndex.html#pandas.DatetimeIndex" title="(in pandas v1.2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DatetimeIndex</span></code></a></p></li>
 <li><p><a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v0.16.3.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></a>: datetimes included in a <em>xarray.DataArray</em></p></li>
-<li><p>raw datetime strings in <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601">ISO format</a>  (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;YYYY-MM-DD&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;YYYY-MM-DDTHH&quot;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&quot;YYYY-MM-DDTHH:MM:SS&quot;</span></code>)</p></li>
+<li><p>raw datetime strings in <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601">ISO format</a>
+(e.g. <code class="docutils literal notranslate"><span class="pre">&quot;YYYY-MM-DD&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;YYYY-MM-DDTHH&quot;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&quot;YYYY-MM-DDTHH:MM:SS&quot;</span></code>)</p></li>
 <li><p>Python built-in <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.datetime</span></code></a> and <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.date" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.date</span></code></a></p></li>
 </ul>
-<p>We can pass datetime inputs based on one of the types listed above directly to the <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> arguments
-of e.g. the <a class="reference internal" href="../../api/generated/pygmt.Figure.plot.html#pygmt.Figure.plot" title="pygmt.Figure.plot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.Figure.plot</span></code></a> method:</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">region</span></code> argument has to include the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> axis limits as <em>str</em> in the form
-<em>date_min/date_max/ymin/ymax</em>.</p>
+<p>We can pass datetime inputs based on one of the types listed above directly to
+the <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> parameters of e.g. the <a class="reference internal" href="../../api/generated/pygmt.Figure.plot.html#pygmt.Figure.plot" title="pygmt.Figure.plot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.Figure.plot</span></code></a> method.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">region</span></code> parameter has to include the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> axis limits
+in the form [<em>date_min</em>, <em>date_max</em>, <em>ymin</em>, <em>ymax</em>]. Here <em>date_min</em> and
+<em>date_max</em> can be directly defined as datetime input.</p>
 <img alt="datetime inputs" class="sphx-glr-single-img" src="../../_images/sphx_glr_datetime-inputs_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;IPython.core.display.Image object&gt;
@@ -316,7 +291,9 @@ of e.g. the <a class="reference internal" href="../../api/generated/pygmt.Figure
 <span class="c1"># create a basemap with limits of 2010-01-01 to 2020-06-01 on the x axis and</span>
 <span class="c1"># 0 to 10 on the y axis</span>
 <a href="../../api/generated/pygmt.Figure.basemap.html#pygmt.Figure.basemap" title="pygmt.Figure.basemap" class="sphx-glr-backref-module-pygmt sphx-glr-backref-type-py-method"><span class="n">fig</span><span class="o">.</span><span class="n">basemap</span></a><span class="p">(</span>
-    <span class="n">projection</span><span class="o">=</span><span class="s2">&quot;X15c/5c&quot;</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="s2">&quot;2010-01-01/2020-06-01/0/10&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;WSen&quot;</span><span class="p">,</span> <span class="s2">&quot;af&quot;</span><span class="p">]</span>
+    <span class="n">projection</span><span class="o">=</span><span class="s2">&quot;X15c/5c&quot;</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="p">[</span><a href="https://docs.python.org/3/library/datetime.html#datetime.date" title="datetime.date" class="sphx-glr-backref-module-datetime sphx-glr-backref-type-py-class"><span class="n">datetime</span><span class="o">.</span><span class="n">date</span></a><span class="p">(</span><span class="mi">2010</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <a href="https://docs.python.org/3/library/datetime.html#datetime.date" title="datetime.date" class="sphx-glr-backref-module-datetime sphx-glr-backref-type-py-class"><span class="n">datetime</span><span class="o">.</span><span class="n">date</span></a><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+    <span class="n">frame</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;WSen&quot;</span><span class="p">,</span> <span class="s2">&quot;af&quot;</span><span class="p">],</span>
 <span class="p">)</span>
 
 <span class="c1"># numpy.datetime64 types</span>
@@ -347,7 +324,7 @@ of e.g. the <a class="reference internal" href="../../api/generated/pygmt.Figure
 <a href="../../api/generated/pygmt.Figure.show.html#pygmt.Figure.show" title="pygmt.Figure.show" class="sphx-glr-backref-module-pygmt sphx-glr-backref-type-py-method"><span class="n">fig</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.430 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.607 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-gallery-plot-datetime-inputs-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/af9d081a4da0a8e5a27c7a95e1439d5f/datetime-inputs.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">datetime-inputs.py</span></code></a></p>
@@ -383,7 +360,7 @@ of e.g. the <a class="reference internal" href="../../api/generated/pygmt.Figure
         &copy; Copyright 2017-2021, The PyGMT Developers.
       
         <span class="commit">
-          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/65b099a">65b099a</a></code>.
+          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/8a97e1a">8a97e1a</a></code>.
         </span>
       
 

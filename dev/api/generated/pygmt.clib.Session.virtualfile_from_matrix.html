@@ -31,7 +31,6 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -247,7 +246,6 @@
                    class="fa fa-github"> Improve this page</a>
             
         
-        
     </li>
 
   </ul>
@@ -258,31 +256,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="section" id="pygmt-clib-session-virtualfile-from-matrix">
+  <div class="section" id="pygmt-clib-session-virtualfile-from-matrix">
 <h1>pygmt.clib.Session.virtualfile_from_matrix<a class="headerlink" href="#pygmt-clib-session-virtualfile-from-matrix" title="Permalink to this headline">¶</a></h1>
 <dl class="py method">
 <dt id="pygmt.clib.Session.virtualfile_from_matrix">
@@ -297,11 +271,11 @@ virtual file upon exit of the <code class="docutils literal notranslate"><span c
 to be a <code class="docutils literal notranslate"><span class="pre">GMT_DATASET</span></code>.</p>
 <p><strong>Not meant for creating ``GMT_GRID``</strong>. The grid requires more
 metadata than just the data matrix. Use
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">virtualfile_from_grid</span></code> instead.</p>
+<a class="reference internal" href="pygmt.clib.Session.virtualfile_from_grid.html#pygmt.clib.Session.virtualfile_from_grid" title="pygmt.clib.Session.virtualfile_from_grid"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.clib.Session.virtualfile_from_grid</span></code></a> instead.</p>
 <p>Use this instead of creating the data container and virtual file by
-hand with <code class="xref py py-meth docutils literal notranslate"><span class="pre">create_data</span></code>,
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">put_matrix</span></code>, and
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">open_virtual_file</span></code></p>
+hand with <a class="reference internal" href="pygmt.clib.Session.create_data.html#pygmt.clib.Session.create_data" title="pygmt.clib.Session.create_data"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.clib.Session.create_data</span></code></a>,
+<a class="reference internal" href="pygmt.clib.Session.put_matrix.html#pygmt.clib.Session.put_matrix" title="pygmt.clib.Session.put_matrix"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.clib.Session.put_matrix</span></code></a>, and
+<a class="reference internal" href="pygmt.clib.Session.open_virtual_file.html#pygmt.clib.Session.open_virtual_file" title="pygmt.clib.Session.open_virtual_file"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.clib.Session.open_virtual_file</span></code></a></p>
 <p>The matrix must be C contiguous in memory. If it is not (e.g., it is a
 slice of a larger array), the array will be copied to make sure it is.</p>
 <dl class="field-list simple">
@@ -362,7 +336,7 @@ GMT module.</p>
         &copy; Copyright 2017-2021, The PyGMT Developers.
       
         <span class="commit">
-          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/65b099a">65b099a</a></code>.
+          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/8a97e1a">8a97e1a</a></code>.
         </span>
       
 

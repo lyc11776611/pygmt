@@ -31,7 +31,6 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -119,6 +118,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#lines">Lines</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="line/line-custom-cpt.html">Line colors with a custom CPT</a></li>
 <li class="toctree-l3"><a class="reference internal" href="line/linestyles.html">Line styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="line/vector-heads-tails.html">Vector heads and tails</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#coastlines-and-boundaries">Coastlines and boundaries</a><ul>
@@ -251,7 +251,6 @@
                    class="fa fa-github"> Improve this page</a>
             
         
-        
     </li>
 
   </ul>
@@ -262,31 +261,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="section" id="gallery">
+  <div class="section" id="gallery">
 <span id="sphx-glr-gallery"></span><span id="id1"></span><h1>Gallery<a class="headerlink" href="#gallery" title="Permalink to this headline">¶</a></h1>
 <p>This gallery contains examples of what PyGMT can do. Click on any example to see the
 code used to generate it.</p>
@@ -304,114 +279,120 @@ code used to generate it.</p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
+<div class="sphx-glr-thumbcontainer" tooltip="Many modules in PyGMT allow plotting vectors with individual heads and tails. For this purpose,..."><div class="figure align-default" id="id4">
+<img alt="Vector heads and tails" src="../_images/sphx_glr_vector-heads-tails_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="line/vector-heads-tails.html#sphx-glr-gallery-line-vector-heads-tails-py"><span class="std std-ref">Vector heads and tails</span></a></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
 <div class="sphx-glr-clear"></div></div>
 <div class="section" id="coastlines-and-boundaries">
 <span id="sphx-glr-gallery-coast"></span><h2>Coastlines and boundaries<a class="headerlink" href="#coastlines-and-boundaries" title="Permalink to this headline">¶</a></h2>
-<div class="sphx-glr-thumbcontainer" tooltip="The borders argument of pygmt.Figure.coast specifies levels of political boundaries to plot and..."><div class="figure align-default" id="id4">
+<div class="sphx-glr-thumbcontainer" tooltip="The borders argument of pygmt.Figure.coast specifies levels of political boundaries to plot and..."><div class="figure align-default" id="id5">
 <img alt="Political Boundaries" src="../_images/sphx_glr_borders_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="coast/borders.html#sphx-glr-gallery-coast-borders-py"><span class="std std-ref">Political Boundaries</span></a></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="coast/borders.html#sphx-glr-gallery-coast-borders-py"><span class="std std-ref">Political Boundaries</span></a></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="The land and water arguments of pygmt.Figure.coast specify a color to fill in the land and wate..."><div class="figure align-default" id="id5">
+<div class="sphx-glr-thumbcontainer" tooltip="The land and water arguments of pygmt.Figure.coast specify a color to fill in the land and wate..."><div class="figure align-default" id="id6">
 <img alt="Color land and water" src="../_images/sphx_glr_land_and_water_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="coast/land_and_water.html#sphx-glr-gallery-coast-land-and-water-py"><span class="std std-ref">Color land and water</span></a></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="coast/land_and_water.html#sphx-glr-gallery-coast-land-and-water-py"><span class="std std-ref">Color land and water</span></a></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Use pygmt.Figure.coast to display shorelines as black lines."><div class="figure align-default" id="id6">
+<div class="sphx-glr-thumbcontainer" tooltip="Use pygmt.Figure.coast to display shorelines as black lines."><div class="figure align-default" id="id7">
 <img alt="Shorelines" src="../_images/sphx_glr_shorelines_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="coast/shorelines.html#sphx-glr-gallery-coast-shorelines-py"><span class="std std-ref">Shorelines</span></a></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="coast/shorelines.html#sphx-glr-gallery-coast-shorelines-py"><span class="std std-ref">Shorelines</span></a></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
 <div class="sphx-glr-clear"></div></div>
 <div class="section" id="plotting-map-items">
 <span id="sphx-glr-gallery-plot"></span><h2>Plotting map items<a class="headerlink" href="#plotting-map-items" title="Permalink to this headline">¶</a></h2>
-<div class="sphx-glr-thumbcontainer" tooltip="The pygmt.Figure.colorbar method creates a color scalebar. We must specify the colormap via the..."><div class="figure align-default" id="id7">
+<div class="sphx-glr-thumbcontainer" tooltip="The pygmt.Figure.colorbar method creates a color scalebar. We must specify the colormap via the..."><div class="figure align-default" id="id8">
 <img alt="Colorbar" src="../_images/sphx_glr_colorbar_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/colorbar.html#sphx-glr-gallery-plot-colorbar-py"><span class="std std-ref">Colorbar</span></a></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/colorbar.html#sphx-glr-gallery-plot-colorbar-py"><span class="std std-ref">Colorbar</span></a></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Datetime inputs of the following types are supported in PyGMT:"><div class="figure align-default" id="id8">
+<div class="sphx-glr-thumbcontainer" tooltip="Datetime inputs of the following types are supported in PyGMT:"><div class="figure align-default" id="id9">
 <img alt="Datetime inputs" src="../_images/sphx_glr_datetime-inputs_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/datetime-inputs.html#sphx-glr-gallery-plot-datetime-inputs-py"><span class="std std-ref">Datetime inputs</span></a></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/datetime-inputs.html#sphx-glr-gallery-plot-datetime-inputs-py"><span class="std std-ref">Datetime inputs</span></a></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Images or EPS files on maps"><div class="figure align-default" id="id9">
+<div class="sphx-glr-thumbcontainer" tooltip="Images or EPS files on maps"><div class="figure align-default" id="id10">
 <img alt="Images or EPS files on maps" src="../_images/sphx_glr_image_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/image.html#sphx-glr-gallery-plot-image-py"><span class="std std-ref">Images or EPS files on maps</span></a></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/image.html#sphx-glr-gallery-plot-image-py"><span class="std std-ref">Images or EPS files on maps</span></a></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="The pygmt.Figure.inset method adds an inset figure inside a larger figure. The function is call..."><div class="figure align-default" id="id10">
+<div class="sphx-glr-thumbcontainer" tooltip="The pygmt.Figure.inset method adds an inset figure inside a larger figure. The function is call..."><div class="figure align-default" id="id11">
 <img alt="Inset" src="../_images/sphx_glr_inset_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/inset.html#sphx-glr-gallery-plot-inset-py"><span class="std std-ref">Inset</span></a></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/inset.html#sphx-glr-gallery-plot-inset-py"><span class="std std-ref">Inset</span></a></span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="The pygmt.Figure.legend method can automatically create a legend for symbols plotted using pygm..."><div class="figure align-default" id="id11">
+<div class="sphx-glr-thumbcontainer" tooltip="The pygmt.Figure.legend method can automatically create a legend for symbols plotted using pygm..."><div class="figure align-default" id="id12">
 <img alt="Legend" src="../_images/sphx_glr_legend_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/legend.html#sphx-glr-gallery-plot-legend-py"><span class="std std-ref">Legend</span></a></span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/legend.html#sphx-glr-gallery-plot-legend-py"><span class="std std-ref">Legend</span></a></span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="The pygmt.Figure.logo method allows to place the GMT logo on a map.  "><div class="figure align-default" id="id12">
+<div class="sphx-glr-thumbcontainer" tooltip="The pygmt.Figure.logo method allows to place the GMT logo on a map.  "><div class="figure align-default" id="id13">
 <img alt="Logo" src="../_images/sphx_glr_logo_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/logo.html#sphx-glr-gallery-plot-logo-py"><span class="std std-ref">Logo</span></a></span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/logo.html#sphx-glr-gallery-plot-logo-py"><span class="std std-ref">Logo</span></a></span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="The pygmt.Figure.meca method can plot focal mechanisms, or beachballs. We can specify the focal..."><div class="figure align-default" id="id13">
+<div class="sphx-glr-thumbcontainer" tooltip="The pygmt.Figure.meca method can plot focal mechanisms, or beachballs. We can specify the focal..."><div class="figure align-default" id="id14">
 <img alt="Focal mechanisms" src="../_images/sphx_glr_meca_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/meca.html#sphx-glr-gallery-plot-meca-py"><span class="std std-ref">Focal mechanisms</span></a></span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/meca.html#sphx-glr-gallery-plot-meca-py"><span class="std std-ref">Focal mechanisms</span></a></span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="The pygmt.Figure.plot method can plot individual multi-parameter symbols by passing the corresp..."><div class="figure align-default" id="id14">
+<div class="sphx-glr-thumbcontainer" tooltip="The pygmt.Figure.plot method can plot individual multi-parameter symbols by passing the corresp..."><div class="figure align-default" id="id15">
 <img alt="Multi-parameter symbols" src="../_images/sphx_glr_multi-parameter-symbols_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/multi-parameter-symbols.html#sphx-glr-gallery-plot-multi-parameter-symbols-py"><span class="std std-ref">Multi-parameter symbols</span></a></span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/multi-parameter-symbols.html#sphx-glr-gallery-plot-multi-parameter-symbols-py"><span class="std std-ref">Multi-parameter symbols</span></a></span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="Points can be plotted with different transparency levels by passing in an array to the transpar..."><div class="figure align-default" id="id15">
+<div class="sphx-glr-thumbcontainer" tooltip="Points can be plotted with different transparency levels by passing in an array to the transpar..."><div class="figure align-default" id="id16">
 <img alt="Points with varying transparency" src="../_images/sphx_glr_points-transparency_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/points-transparency.html#sphx-glr-gallery-plot-points-transparency-py"><span class="std std-ref">Points with varying transparency</span></a></span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/points-transparency.html#sphx-glr-gallery-plot-points-transparency-py"><span class="std std-ref">Points with varying transparency</span></a></span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="The pygmt.Figure.plot method can plot points. We must specify the plot symbol and size through ..."><div class="figure align-default" id="id16">
+<div class="sphx-glr-thumbcontainer" tooltip="The pygmt.Figure.plot method can plot points. We must specify the plot symbol and size through ..."><div class="figure align-default" id="id17">
 <img alt="Points" src="../_images/sphx_glr_points_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/points.html#sphx-glr-gallery-plot-points-py"><span class="std std-ref">Points</span></a></span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/points.html#sphx-glr-gallery-plot-points-py"><span class="std std-ref">Points</span></a></span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="To create a scatter plot with a legend one may use a loop and create one scatter plot per item ..."><div class="figure align-default" id="id17">
+<div class="sphx-glr-thumbcontainer" tooltip="To create a scatter plot with a legend one may use a loop and create one scatter plot per item ..."><div class="figure align-default" id="id18">
 <img alt="Scatter plots with a legend" src="../_images/sphx_glr_scatter_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/scatter.html#sphx-glr-gallery-plot-scatter-py"><span class="std std-ref">Scatter plots with a legend</span></a></span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/scatter.html#sphx-glr-gallery-plot-scatter-py"><span class="std std-ref">Scatter plots with a legend</span></a></span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="The pygmt.Figure.plot3d method can be used to plot symbols in 3D. In the example below, we show..."><div class="figure align-default" id="id18">
+<div class="sphx-glr-thumbcontainer" tooltip="The pygmt.Figure.plot3d method can be used to plot symbols in 3D. In the example below, we show..."><div class="figure align-default" id="id19">
 <img alt="3D Scatter plots" src="../_images/sphx_glr_scatter3d_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/scatter3d.html#sphx-glr-gallery-plot-scatter3d-py"><span class="std std-ref">3D Scatter plots</span></a></span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="plot/scatter3d.html#sphx-glr-gallery-plot-scatter3d-py"><span class="std std-ref">3D Scatter plots</span></a></span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
 <div class="sphx-glr-clear"></div></div>
 <div class="section" id="grids">
 <span id="sphx-glr-gallery-grid"></span><h2>Grids<a class="headerlink" href="#grids" title="Permalink to this headline">¶</a></h2>
-<div class="sphx-glr-thumbcontainer" tooltip="The pygmt.Figure.grdview() method can plot 3-D surfaces with surftype=&quot;s&quot;. Here, we supply the ..."><div class="figure align-default" id="id19">
+<div class="sphx-glr-thumbcontainer" tooltip="The pygmt.Figure.grdview() method can plot 3-D surfaces with surftype=&quot;s&quot;. Here, we supply the ..."><div class="figure align-default" id="id20">
 <img alt="Plotting a surface" src="../_images/sphx_glr_grdview_surface_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="grid/grdview_surface.html#sphx-glr-gallery-grid-grdview-surface-py"><span class="std std-ref">Plotting a surface</span></a></span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="grid/grdview_surface.html#sphx-glr-gallery-grid-grdview-surface-py"><span class="std std-ref">Plotting a surface</span></a></span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
-<div class="sphx-glr-thumbcontainer" tooltip="The pygmt.grdtrack function samples a raster grid&#x27;s value along specified points. We will need ..."><div class="figure align-default" id="id20">
+<div class="sphx-glr-thumbcontainer" tooltip="The pygmt.grdtrack function samples a raster grid&#x27;s value along specified points. We will need ..."><div class="figure align-default" id="id21">
 <img alt="Sampling along tracks" src="../_images/sphx_glr_track_sampling_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="grid/track_sampling.html#sphx-glr-gallery-grid-track-sampling-py"><span class="std std-ref">Sampling along tracks</span></a></span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="grid/track_sampling.html#sphx-glr-gallery-grid-track-sampling-py"><span class="std std-ref">Sampling along tracks</span></a></span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="toctree-wrapper compound">
 </div>
@@ -443,7 +424,7 @@ code used to generate it.</p>
         &copy; Copyright 2017-2021, The PyGMT Developers.
       
         <span class="commit">
-          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/65b099a">65b099a</a></code>.
+          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/8a97e1a">8a97e1a</a></code>.
         </span>
       
 

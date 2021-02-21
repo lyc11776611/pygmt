@@ -31,7 +31,6 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -247,7 +246,6 @@
                    class="fa fa-github"> Improve this page</a>
             
         
-        
     </li>
 
   </ul>
@@ -258,31 +256,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="section" id="pygmt-clib-session-create">
+  <div class="section" id="pygmt-clib-session-create">
 <h1>pygmt.clib.Session.create<a class="headerlink" href="#pygmt-clib-session-create" title="Permalink to this headline">¶</a></h1>
 <dl class="py method">
 <dt id="pygmt.clib.Session.create">
@@ -292,10 +266,10 @@
 <a class="reference internal" href="pygmt.clib.Session.html#pygmt.clib.Session" title="pygmt.clib.Session"><code class="xref py py-class docutils literal notranslate"><span class="pre">pygmt.clib.Session</span></code></a> can be called.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Usage of <code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code> as a context manager in a
+<p>Usage of <a class="reference internal" href="pygmt.clib.Session.html#pygmt.clib.Session" title="pygmt.clib.Session"><code class="xref py py-class docutils literal notranslate"><span class="pre">pygmt.clib.Session</span></code></a> as a context manager in a
 <code class="docutils literal notranslate"><span class="pre">with</span></code> block is preferred over calling
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">create</span></code> and
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">destroy</span></code> manually.</p>
+<a class="reference internal" href="#pygmt.clib.Session.create" title="pygmt.clib.Session.create"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.clib.Session.create</span></code></a> and
+<a class="reference internal" href="pygmt.clib.Session.destroy.html#pygmt.clib.Session.destroy" title="pygmt.clib.Session.destroy"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.clib.Session.destroy</span></code></a> manually.</p>
 </div>
 <p>Calls <code class="docutils literal notranslate"><span class="pre">GMT_Create_Session</span></code> and generates a new <code class="docutils literal notranslate"><span class="pre">GMTAPI_CTRL</span></code>
 struct, which is a <a class="reference external" href="https://docs.python.org/3/library/ctypes.html#ctypes.c_void_p" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ctypes.c_void_p</span></code></a> pointer. Sets the
@@ -335,7 +309,7 @@ struct, which is a <a class="reference external" href="https://docs.python.org/3
         &copy; Copyright 2017-2021, The PyGMT Developers.
       
         <span class="commit">
-          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/65b099a">65b099a</a></code>.
+          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/8a97e1a">8a97e1a</a></code>.
         </span>
       
 

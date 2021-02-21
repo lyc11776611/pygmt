@@ -67,6 +67,27 @@ Lines
    :hidden:
 
    /gallery/line/linestyles
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Many modules in PyGMT allow plotting vectors with individual heads and tails. For this purpose,...">
+
+.. only:: html
+
+ .. figure:: /gallery/line/images/thumb/sphx_glr_vector-heads-tails_thumb.png
+     :alt: Vector heads and tails
+
+     :ref:`sphx_glr_gallery_line_vector-heads-tails.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /gallery/line/vector-heads-tails
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>
